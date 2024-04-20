@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Web Assignment</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEB Assignment</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="crud.js" defer></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>CRUD Operations Of API</h1>
+<h1>Employee Management System</h1>
 
-        <div class="button-container">
-            <button id="fetchPostsBtn">Fetch All Posts</button>
-            <button id="createPostBtn">Create New Post</button>
-            <button id="updatePostBtn">Update Post</button>
-            <button id="deletePostBtn">Delete Post</button>
-        </div>
+<!-- Form to create a new employee record -->
+<form id="createEmployeeForm">
+    <h2>Create New Employee</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="username">Username:</label> <!-- Added input for username -->
+    <input type="text" id="username" name="username" required><br><br> <!-- Added input for username -->
+    <button type="submit">Create Employee</button>
+    <div class="response-container" id="createEmployeeResponse"></div>
+</form>
 
-        <div id="resultContainer"></div>
-    </div>
+<hr>
 
-    <script src="crud.js" type="module"></script>
+<!-- Form to update an existing employee record -->
+<form id="updateEmployeeForm">
+    <h2>Update Employee</h2>
+    <label for="updateId">Employee ID:</label>
+    <input type="text" id="updateId" name="updateId" required><br><br>
+    <label for="updateName">Name:</label>
+    <input type="text" id="updateName" name="updateName" required><br><br>
+    <label for="updateUsername">Username:</label> <!-- Added input for username -->
+    <input type="text" id="updateUsername" name="updateUsername" required><br><br> <!-- Added input for username -->
+    <button type="submit">Update Employee</button>
+    <div class="response-container" id="updateEmployeeResponse"></div>
+</form>
+
+<hr>
+
+<!-- Form to delete an existing employee record -->
+<form id="deleteEmployeeForm">
+    <h2>Delete Employee</h2>
+    <label for="deleteId">Employee ID:</label>
+    <input type="text" id="deleteId" name="deleteId" required><br><br>
+    <button type="submit">Delete Employee</button>
+    <div class="response-container" id="deleteEmployeeResponse"></div>
+</form>
+
+<hr>
+
+<!-- Button to retrieve all employees -->
+<button id="getAllEmployeesBtn">Get All Employees</button>
+<div class="response-container" id="getAllEmployeesResponse"></div>
+
+<!-- Button to retrieve a single employee -->
+<button id="getEmployeeBtn">Get Employee by ID</button>
+<div class="response-container" id="getEmployeeResponse"></div>
+
 </body>
 </html>
