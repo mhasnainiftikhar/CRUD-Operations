@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEB Assignment</title>
+<title>Employee Management</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="crud.js" defer></script>
 <link rel="stylesheet" href="style.css">
+</style>
 </head>
 <body>
 <h1>Employee Management System</h1>
-
 <!-- Form to create a new employee record -->
 <form id="createEmployeeForm">
     <h2>Create New Employee</h2>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
-    <label for="username">Username:</label> <!-- Added input for username -->
-    <input type="text" id="username" name="username" required><br><br> <!-- Added input for username -->
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" required><br><br>
     <button type="submit">Create Employee</button>
     <div class="response-container" id="createEmployeeResponse"></div>
 </form>
@@ -31,8 +31,8 @@
     <input type="text" id="updateId" name="updateId" required><br><br>
     <label for="updateName">Name:</label>
     <input type="text" id="updateName" name="updateName" required><br><br>
-    <label for="updateUsername">Username:</label> <!-- Added input for username -->
-    <input type="text" id="updateUsername" name="updateUsername" required><br><br> <!-- Added input for username -->
+    <label for="updateSalary">Salary:</label>
+    <input type="number" id="updateSalary" name="updateSalary" required><br><br>
     <button type="submit">Update Employee</button>
     <div class="response-container" id="updateEmployeeResponse"></div>
 </form>
